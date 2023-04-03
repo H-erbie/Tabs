@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(204, 243, 165);
+}
+.app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+.display{
+    display: block;
+}
+
+.app-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
+.app-img{
+    border-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+.app-img img{
+    width: 100%;
+    border-radius: 1rem;
+    transition: 0.5s ease;
+
+}
+.app-img:hover img{
+    transform: scale(1.5);
+}
+.tabs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: white;
+}
+.tab-nav{
+    display: flex;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.tab{
+    padding: 0.5rem;
+    background-color: gray;
+    transition: 0.5s ease;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+.tab:hover{
+    background-color:dimgray;
+}
+.tab-info{
+    width: 100%;
+}
+.tab-info > div{
+    padding: 0.5rem 1rem;
+    display: none;
+}
+.active {
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 800px) {
+    .app-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .app-img{
+        width: 60%;
+    }
+}
